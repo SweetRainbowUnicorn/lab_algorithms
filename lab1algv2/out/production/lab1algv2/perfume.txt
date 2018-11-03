@@ -1,0 +1,5 @@
+zara,200,6000
+gucci,150,12000
+vicroria's secrets,220,5000
+tom ford,40,3500
+miu miu,500,8000
