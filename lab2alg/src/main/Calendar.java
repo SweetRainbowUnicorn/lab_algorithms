@@ -13,19 +13,14 @@ public class Calendar {
     public void doMagic() {
 
         for (int i = 0; i < hours.size() - 1; i++) {
-
             if (hours.get(i + 1).key <= hours.get(i).value) {
                 if (hours.get(i + 1).value <= hours.get(i).value) {
-                   hours.remove(i + 1);
-                   i--;
-
+                    hours.remove(i + 1);
+                    i--;
                 } else {
-
                     hours.get(i).value = hours.get(i + 1).value;
                     hours.remove(i + 1);
                     i--;
-
-
                 }
             }
         }
@@ -34,7 +29,6 @@ public class Calendar {
     public void sortHours() {
         sortByKey();
         sortByValue();
-
     }
 
 
@@ -46,11 +40,8 @@ public class Calendar {
                 if (hours.get(j - 1).key > hours.get(j).key) {
                     Collections.swap(hours, j - 1, j);
                 }
-
-
             }
         }
-
     }
 
     public void sortByValue() {
@@ -62,25 +53,18 @@ public class Calendar {
                         && hours.get(j - 1).value > hours.get(j).value) {
                     Collections.swap(hours, j - 1, j);
                 }
-
-
             }
         }
-
     }
 
     public void printHours(List<Tuple> hoursToPrint) {
         for (Tuple tuple : hoursToPrint) {
             System.out.print(tuple.toString() + " ");
         }
-
-
     }
 
     public void addHours(Tuple tuple) {
         hours.add(tuple);
-
-
     }
 
 
@@ -91,7 +75,6 @@ public class Calendar {
     public void setHours(List<Tuple> hours) {
         this.hours = hours;
     }
-
 
     public List<Tuple> getResult() {
         return result;

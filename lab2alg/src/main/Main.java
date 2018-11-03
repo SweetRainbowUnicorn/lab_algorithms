@@ -17,7 +17,6 @@ public class Main {
         System.out.println("\nSorted");
         calendar.sortHours();
         calendar.printHours(calendar.getHours());
-
         System.out.println("\nResult");
         calendar.doMagic();
         calendar.printHours(calendar.getHours());
