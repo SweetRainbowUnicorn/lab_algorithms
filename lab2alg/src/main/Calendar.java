@@ -10,7 +10,7 @@ public class Calendar {
     private List<Tuple> result = new ArrayList<>();
 
 
-    public void doMagic() {
+    public void joinHours() {
 
         for (int i = 0; i < hours.size() - 1; i++) {
             if (hours.get(i + 1).key <= hours.get(i).value) {
