@@ -1,13 +1,11 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Calendar {
-    private List<Tuple> hours = new ArrayList<>();
-    private List<Tuple> result = new ArrayList<>();
+    HourComparator comparator = new HourComparator();
+    private List<Tuple> hours = new ArrayList<Tuple>();
+
 
 
     public void joinHours() {
@@ -26,36 +24,12 @@ public class Calendar {
         }
     }
 
-    public void sortHours() {
-        sortByKey();
-        sortByValue();
+
+    public List<Tuple> sortHours(){
+        hours.sort(comparator);
+        return hours;
     }
 
-
-    public void sortByKey() {
-        int n = hours.size();
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-                if (hours.get(j - 1).key > hours.get(j).key) {
-                    Collections.swap(hours, j - 1, j);
-                }
-            }
-        }
-    }
-
-    public void sortByValue() {
-        int n = hours.size();
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 1; j < (n - i); j++) {
-                if (hours.get(j - 1).key == hours.get(j).key
-                        && hours.get(j - 1).value > hours.get(j).value) {
-                    Collections.swap(hours, j - 1, j);
-                }
-            }
-        }
-    }
 
     public void printHours(List<Tuple> hoursToPrint) {
         for (Tuple tuple : hoursToPrint) {
@@ -76,11 +50,4 @@ public class Calendar {
         this.hours = hours;
     }
 
-    public List<Tuple> getResult() {
-        return result;
-    }
-
-    public void setResult(List<Tuple> result) {
-        this.result = result;
-    }
 }

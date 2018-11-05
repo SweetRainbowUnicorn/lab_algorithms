@@ -5,11 +5,12 @@ public class Main {
         Calendar calendar = new Calendar();
         
         calendar.addHours(new Tuple(1,4));
-        calendar.addHours(new Tuple(3,5));
         calendar.addHours(new Tuple(6,9));
+        calendar.addHours(new Tuple(3,5));
+        calendar.addHours(new Tuple(11,15));
         calendar.addHours(new Tuple(7,9));
         calendar.addHours(new Tuple(7,10));
-        calendar.addHours(new Tuple(11,15));
+
 
 
 
