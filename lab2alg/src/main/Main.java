@@ -18,7 +18,7 @@ public class Main {
         calendar.sortHours();
         calendar.printHours(calendar.getHours());
         System.out.println("\nResult");
-        calendar.doMagic();
+        calendar.joinHours();
         calendar.printHours(calendar.getHours());
 
 
